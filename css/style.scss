@@ -118,20 +118,34 @@ img{
     margin-right: 40px;
 }
 
-.menu ul{
-    @include flexbox(center,space-between);
+.menu{
+    & ul{
+        @include flexbox(center,space-between);
+    }
+    & ul li{
+        position: relative;
+        margin-right: 40px;
+        transform: translateX(40px);
+    }
+    & ul li a{
+        font-size: 16px;
+        font-weight: 400;
+        color: $text-dark-gray;
+    }
+    & ul li:hover>a{
+        color: $text-blues;
+    }
+    & ul li:hover::before{
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 12px;
+        height: 2px;
+        background-color: $brg-blues;
+    }
 }
 
-.menu ul li{
-    margin-right: 40px;
-    transform: translateX(40px);
-}
-
-.menu ul li a{
-    font-size: 16px;
-    font-weight: 400;
-    color: $text-dark-gray;
-}
 
 .banner{
     @include flexbox(center,space-between);
