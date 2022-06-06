@@ -338,12 +338,41 @@ img {
 }
 
 .explore__item {
+  position: relative;
   margin-right: 30px;
 }
 
 .explore__img {
   border-radius: 30px;
   width: 270px;
+}
+
+.explore__content {
+  display: none;
+  position: absolute;
+  content: "";
+  left: 16px;
+  bottom: 16px;
+  right: 16px;
+  padding: 18px 39px;
+  background: rgba(5, 16, 31, 0.15);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border-radius: 12px;
+  color: #EFF3FF;
+  font-size: 16px;
+  text-align: center;
+}
+
+.explore__country {
+  padding-top: 2px;
+  font-weight: 600;
+}
+
+.explore__item:hover .explore__content {
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .best-trip {
