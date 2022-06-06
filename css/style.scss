@@ -350,15 +350,35 @@ img{
 .subscribe{
     @include flexbox(center);
     background-color: #F5F9FF;
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    position: relative;
+    &__circle{
+        position: absolute;
+        z-index: 1;
+    }
+    &__circle:first-child{
+        top: 77px;
+        left: 54px;
+    }
+    &__circle:nth-child(2){
+        top: 17px;
+        right: 20px;
+    }
+    &__circle:nth-child(3){
+        top: 90px;
+        right: 69px;
+    }
     &__title{
         white-space: nowrap
     }
     &__content{
         margin-right: 127px;
+        z-index: 2;
     }
     
     &__form {
+        z-index: 2;
         display: flex;
         padding: 2px;
         background: #FFFFFF;

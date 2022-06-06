@@ -600,7 +600,29 @@ img {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #F5F9FF;
-  margin-bottom: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  position: relative;
+}
+
+.subscribe__circle {
+  position: absolute;
+  z-index: 1;
+}
+
+.subscribe__circle:first-child {
+  top: 77px;
+  left: 54px;
+}
+
+.subscribe__circle:nth-child(2) {
+  top: 17px;
+  right: 20px;
+}
+
+.subscribe__circle:nth-child(3) {
+  top: 90px;
+  right: 69px;
 }
 
 .subscribe__title {
@@ -609,9 +631,11 @@ img {
 
 .subscribe__content {
   margin-right: 127px;
+  z-index: 2;
 }
 
 .subscribe__form {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
