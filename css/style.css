@@ -57,6 +57,13 @@ img {
   color: #3685FB;
 }
 
+.btn--border:hover {
+  background-color: #3685FB;
+  color: #FFFFFF;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
 .btn--border-blues {
   border: 1px solid #3685FB;
   color: #3685FB;

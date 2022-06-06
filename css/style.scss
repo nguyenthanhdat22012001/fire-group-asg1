@@ -1,6 +1,8 @@
 @import "./mixin";
 @import "./variables";
 
+// globals
+
 body{
     font-family: 'Poppins', sans-serif;
     line-height: 1.4;
@@ -53,6 +55,11 @@ img{
         border: 1px solid $brg-blues;
         color: $text-blues;
     }
+    &--border:hover{
+        background-color: $brg-blues;
+        color: $text-white;
+        transition: all 0.25s ease;
+    }
     }
 
 
@@ -68,7 +75,7 @@ img{
 
 
 
-// 
+// main
 
 .wrapper{
     width: 1440px;
