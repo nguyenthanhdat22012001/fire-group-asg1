@@ -1,0 +1,408 @@
+@import "./mixin";
+@import "./variables";
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-black;
+}
+
+h1,h2,h3{
+    font-family: 'Sen', sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+  }
+
+
+.btn{
+    font-weight: 600;
+    cursor: pointer;
+    &--blues{
+        background-color:  $brg-blues;
+        color: $text-white;
+        border: none;
+        &-1{
+        border-radius: 24.5px;
+        font-size: 16px;
+        padding: 11px 27px 10px 27px;
+       }
+       &-2{
+        border-radius: 32px;
+        font-size: 18px;
+        padding: 17px 42px;
+       }
+       &-3{
+        border-radius: 32px;
+        font-size: 18px;
+        padding: 17px 53px;
+       }
+       &-4{
+        border-radius: 32px;
+        font-size: 16px;
+        padding: 18px 34px;
+       }
+    }
+    &--border{
+        border-radius: 18px;
+        padding: 5px 20px;
+        border: 1px solid $brg-blues;
+        color: $text-blues;
+    }
+    }
+
+
+
+
+.btn--border-blues{
+    border: 1px solid $brg-blues;
+    color: $text-blues;
+    font-size: 14px;
+    border-radius: 18px;
+    padding: 5px 20px;
+}
+
+
+
+// 
+
+.wrapper{
+    width: 1440px;
+    margin: 0 auto;
+}
+.row{
+    width: 100%;
+    padding: 0 135px
+}
+
+.header{
+    margin: 36px 0 64px 0;
+    @include flexbox(center,space-between);
+    &__form {
+        display: flex;
+        padding: 2px;
+        background: #FFFFFF;
+        border-radius: 25px;
+        width: 288px;
+      }
+      
+      &__form input[type="search"]::placeholder {
+        color: #A9AFB9;
+      }
+      
+      &__form input[type="search"]:focus {
+         border: none;
+         outline: none;
+      }
+
+      &__form input {
+        border: none;
+        padding: 12px 64px 12px 50px;
+        width: 100%;
+         background: transparent url("../images/search.svg") no-repeat 14px center;
+      }
+
+}
+
+.logo-search{
+    @include flexbox(center);
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 24px;
+    margin-right: 40px;
+}
+
+.menu ul{
+    @include flexbox(center,space-between);
+}
+
+.menu ul li{
+    margin-right: 40px;
+    transform: translateX(40px);
+}
+
+.menu ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-dark-gray;
+}
+
+.banner{
+    @include flexbox(center,space-between);
+    margin-bottom: 240px;
+    &__image{
+        margin-right: 130px;
+        width: 570px;
+    }
+    &__content{
+        flex: 1;
+    }
+    &__title-action{
+        color: $text-green;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 62px;
+        color: $text-dark-black;
+        padding-bottom: 22px;
+        letter-spacing: -0.02em;
+    }
+    &__icon-smile{
+        display: inline !important;
+    }
+    &__description{
+        font-size: 18px;
+        padding-bottom: 38px;
+    }
+    &__actions{
+        @include flexbox(center,space-between);
+    }
+    &__img-about{
+        position: relative;
+    }
+    &__icon{
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -50%;
+        // transform: translate(50%);
+        transform: translateY(-40%);
+    }
+    &__link{
+        font-weight: 600;
+        font-size: 18px;
+        color: $text-dark-black;
+    }
+}
+
+.title{
+    font-weight: 700;
+    font-size: 42px;
+    color: $text-dark-black;
+    padding-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.description{
+    font-size: 16px;
+    padding-bottom: 55px;
+    width: 507px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.explore{
+    margin-bottom: 266px;
+    &__description{
+        width: 507px;
+    }
+    &__list{
+        @include flexbox();
+        transform: translateX(30px);
+    }
+    &__item{
+        margin-right: 30px;
+    }
+    &__img{
+        border-radius: 30px;
+        width: 270px;
+    }
+}
+
+.best-trip{
+    margin-bottom: 266px;
+    &__description{
+        width: 507px;
+        margin: 0 auto;
+    }
+    &__list{
+        @include flexbox();
+        transform: translateX(30px);
+        margin-bottom: 38px;
+    }
+    &__item{
+        margin-right: 30px;
+    }
+    &__img{
+        margin-bottom: 28px;
+    }
+    &__content{
+        padding: 0px 22px 35px 22px ;
+    }
+    &__link{
+        font-weight: 600; 
+        font-size: 18px;
+        color: #000000;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    &__start{
+        @include flexbox(center);
+        color: $text-yellow;
+        font-size: 16px;
+        margin-bottom: 5px;
+        & img{
+            display: inline-block;
+            padding-right: 6px
+        }
+    }
+    &__action{
+            @include flexbox(center,space-between);
+    }
+    &__price{
+        color: #6C7B83;
+        & strong{
+            color: #000000;;
+            font-weight: 600;
+        }
+    }
+    &__view-all{
+        @include flexbox(flex-start,center);
+    }
+}
+
+.our-trip{
+    @include flexbox(center,space-between);
+    margin-bottom: 266px;
+    &__image{
+        @include flexbox(center);
+        margin-right: 130px;
+    }
+    &__content{
+        // flex: 1;
+        width: 470px;
+    }
+    &__img-left{
+        margin-right: 30px;
+    }
+    &__img-right{
+        @include flexbox(flex-start,flex-start,nowrap,column);
+        & img:first-child{
+            margin-bottom: 30px; 
+        }
+        &__description{
+            margin-bottom: 38px;
+        }
+    }
+    &__description{
+        padding-bottom: 38px;
+    }
+}
+
+.subscribe{
+    @include flexbox(center);
+    background-color: #F5F9FF;
+    margin-bottom: 96px;
+    &__title{
+        white-space: nowrap
+    }
+    &__content{
+        margin-right: 127px;
+    }
+    
+    &__form {
+        display: flex;
+        padding: 2px;
+        background: #FFFFFF;
+        border-radius: 33px;
+        width: 470px;
+    }
+    
+    &__form input[type="email"] {
+        border: none;
+        padding: 18px 28px;
+        font-size: 16px;
+        border-radius: inherit;
+        flex: 1;
+    }
+    
+    &__form input[type="email"]::placeholder {
+        color: #989DA7;
+    }
+    
+
+    &__form input[type="email"]:focus {
+        border: none;
+        outline: none;
+    }
+    
+}
+
+.footer{
+    padding-top: 96px;
+    background-color: $text-dark-blues;
+    &__top{
+        @include flexbox();
+    }
+    &__logo{
+        margin-right: 145px;
+        & h3{
+            color: $text-white;
+        }
+    }
+    &__content{
+        @include flexbox(flex-start,space-between);
+        flex: 1;
+    }
+    &__description{
+        width: 267px;
+        color: $text-gray;
+        padding: 18px 0px;
+        line-height: 26px;
+    }
+    &__icons{
+        @include flexbox();
+      & li{
+        padding-right: 18px;
+      }
+    }
+    
+    &__title{
+        font-weight: 600;
+        font-size: 16px;
+        padding-bottom: 14px;
+        position: relative;
+        color: $text-white;
+        &::before{
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 130px;
+            height: 1px;
+            background-color:  #394659;
+        }
+    }
+    &__links{
+        margin: 28px 0 26px 0;
+        & li{
+            padding-bottom: 12px;
+            color: $text-gray;
+            max-width: 231px;
+        }
+        & li>a{
+            color: $text-gray;
+        }
+    }
+    &__line{
+        width: 100%;
+        height: 1px;
+        background: #394659;
+    }
+    &__copyright{
+        padding: 28px 0;
+        text-align: center;
+        color: #878E99;
+    }
+}
+
